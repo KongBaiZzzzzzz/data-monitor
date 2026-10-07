@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ApplicationIcon>开发.ico</ApplicationIcon>
+	  
+
+  </PropertyGroup>
+
+  <PropertyGroup>
+  	<AssemblyTitle>数据检测平台后台</AssemblyTitle>
+  	<Product>数据检测平台后台</Product>
+  	<Company>MyCompany</Company>
+  	<Description>数据检测平台后台</Description>
+
+	<!-- 后台程序名字 --> 
+  	<AssemblyName>数据检测平台后台</AssemblyName>		
+  </PropertyGroup>
+
+  <!-- 输出目录去除架构 -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+  	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <!-- 引入 ASP.NET Core（自托管 SignalR 需要） -->
+  <ItemGroup>
+  	<FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <Content Include="开发.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Image\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="TaskScheduler" Version="2.12.2" />
+  </ItemGroup>
+
+</Project>
