@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace backgroundApp
+namespace backgroundApp.Communication.SignalR
 {
     internal class DataHub:Hub
     {

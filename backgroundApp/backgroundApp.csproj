@@ -36,6 +36,8 @@
 
   <ItemGroup>
     <Folder Include="Image\" />
+    <Folder Include="DAL\" />
+    <Folder Include="Business\" />
   </ItemGroup>
 
   <ItemGroup>

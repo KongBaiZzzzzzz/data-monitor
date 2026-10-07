@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace data_monitor.DAL
+namespace backgroundApp.Communication.Modbus
 {
-    public class DataAccess
+    internal class ModbusRtuClient
     {
-
     }
 }

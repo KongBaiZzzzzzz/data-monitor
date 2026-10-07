@@ -16,7 +16,6 @@
   <ItemGroup>
     <Folder Include="View\" />
     <Folder Include="ViewModel\" />
-    <Folder Include="Communcation\" />
     <Folder Include="MyUserControls\" />
   </ItemGroup>
 
