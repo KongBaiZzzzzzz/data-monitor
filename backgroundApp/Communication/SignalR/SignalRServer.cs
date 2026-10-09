@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading.Tasks;
+using backgroundApp.Common;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SignalR;
@@ -43,7 +44,7 @@ namespace backgroundApp.Communication.SignalR
             // 后台运行，不阻塞
             _ = _app.RunAsync();
 
-            Program.Log("SignalR 服务已启动: http://0.0.0.0:5000/dataHub");
+            Logger.Log("SignalR 服务已启动: http://0.0.0.0:5000/dataHub");
         }
 
         public void Stop()

@@ -1,6 +1,8 @@
 ﻿
+using backgroundApp.Common;
 using backgroundApp.Communication.SignalR;
 using Microsoft.VisualBasic;
+
 
 namespace backgroundApp
 {
@@ -60,7 +62,7 @@ namespace backgroundApp
                 }
                 catch (Exception ex)
                 {
-                    Log($"采集/推送失败: {ex.Message}");
+                    Logger.Log($"采集/推送失败: {ex.Message}");
                 }
 
                 Thread.Sleep(1000); 

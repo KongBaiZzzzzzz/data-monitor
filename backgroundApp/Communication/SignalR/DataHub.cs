@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using backgroundApp.Common;
+using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace backgroundApp.Communication.SignalR
             var ip = Context.GetHttpContext()?.Connection.RemoteIpAddress?.ToString();
 
             _clients[Context.ConnectionId] = ip ?? "unknown";
-            Program.Log($"客户端连接: {Context.ConnectionId} ({ip})");
+            Logger.Log($"客户端连接: {Context.ConnectionId} ({ip})");
 
             await base.OnConnectedAsync();
         }
@@ -27,7 +28,7 @@ namespace backgroundApp.Communication.SignalR
         public override async Task OnDisconnectedAsync(Exception? exception)
         {
             if (_clients.TryRemove(Context.ConnectionId, out var ip))
-                Program.Log($"客户端断开: {Context.ConnectionId} ({ip})");
+                Logger.Log($"客户端断开: {Context.ConnectionId} ({ip})");
 
             await base.OnDisconnectedAsync(exception);
         }
